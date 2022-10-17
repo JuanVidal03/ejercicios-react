@@ -28,6 +28,7 @@ body{
 
 .card-body{
   width: 100%;
+  max-width: 700px;
   height: 100%;
   max-height: 700px;
   background-color: #fff;
