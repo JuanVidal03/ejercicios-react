@@ -36,7 +36,6 @@ const ListContacto = ( { contact, online, remove } ) => {
 }
 
 ListContacto.propTypes = {
-    //le digo que esto va aser una instancia de la clase constructor Contacto.js
     contact: PropTypes.instanceOf(Contacto),
     remove: PropTypes.func.isRequired,
     online: PropTypes.func.isRequired

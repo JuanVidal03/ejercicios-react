@@ -1,12 +1,13 @@
 import ListContacto from "./ListContacto";
 import { Contacto } from "./Contacto";
 import { useState } from "react";
+import ContactForm from "./foms/ContactForm";
 
 const RenderContacto = () => {
 
     //ejemplo de contacto
     let contacto = new Contacto('Juan', 'Vidal', 'juanmvg2003@gmail.com', true);
-    let contacto1 = new Contacto('Juan', 'Vidal', 'juanmvg2003@gmail.com', false);
+    let contacto1 = new Contacto('Luisa', 'Lopez', 'mail@gmail.com', false);
 
     const [contactos, setContactos] = useState([contacto, contacto1]);
 
@@ -28,6 +29,16 @@ const RenderContacto = () => {
 
         tempContact.splice(index,1)
         setContactos(tempContact); 
+    }
+
+
+    //función para añadir contacto
+    const addContact = (contact) => {
+        const index = contactos.indexOf( contact );
+        const tempContact = [...contactos];
+
+        tempContact.push(contact);
+        setContactos(tempContact);
     }
 
 
@@ -71,7 +82,7 @@ const RenderContacto = () => {
                     </div>
                 </div>
             </div>
-            {/* <ContactForm add={ addTask }/> */}
+            <ContactForm add={ addContact }/>
         </div>
     )
 }
