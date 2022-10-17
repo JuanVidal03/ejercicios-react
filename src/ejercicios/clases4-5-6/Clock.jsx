@@ -20,7 +20,7 @@ const Clock = () => {
         
         //DidMount
        let timerID = setInterval(() => {
-            tick()
+            tick();
         }, 1000);
 
 
@@ -44,10 +44,8 @@ const Clock = () => {
                 fecha: new Date(),
                 edad
             }
-        })
-
+        });
     }
-
 
     return (
         <div>
