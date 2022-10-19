@@ -120,3 +120,15 @@ Contact Form styles
 .contactForm__btn:hover::after{
   top: 0;
 }
+
+
+/*==========
+Esilos ejercicios clases 10-11-12
+===========*/
+
+.cuadrado-clase10{
+  margin-top: 5rem;
+  width: 255px;
+  height: 255px;
+  border: solid 1px #000;
+}
