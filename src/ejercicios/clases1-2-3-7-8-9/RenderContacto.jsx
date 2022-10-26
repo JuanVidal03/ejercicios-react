@@ -44,7 +44,7 @@ const RenderContacto = () => {
 
     return(
 
-        <div>
+        <div className="rederContact-container">
             <div>
                 <div className="card">
                     {/* Card Header */}
