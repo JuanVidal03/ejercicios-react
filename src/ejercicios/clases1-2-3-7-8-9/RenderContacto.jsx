@@ -67,7 +67,7 @@ const RenderContacto = () => {
 
                             <tbody>
 
-                                {/* Iterar sobre la lista de tareas */}
+                                {/* Iterar sobre la lista de contactos */}
                                 {contactos.map((contacto, index) => 
                                     <ListContacto
                                         contact={contacto}

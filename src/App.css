@@ -11,8 +11,8 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #282c34;
-}
+  /* background-color: #282c34;  */
+} 
 
  .contact-container{
   background-color: #fff;
@@ -182,4 +182,42 @@ Esilos ejercicios clases 10-11-12
   width: 255px;
   height: 255px;
   border: solid 1px #000;
+}
+
+/* header */
+.header{
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+
+.item-navbar{
+  text-decoration: none;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #000;
+}
+
+/*================
+CHUCK NORRIS API EJERCICIOS 19, 20, 21
+==================*/
+
+.chuck-norris{
+  width: 100%;
+  max-width: 900px;
+  margin: 5rem;
+}
+
+.joke-chuck{
+  margin: 2rem;
+  color: #282c34;
+}
+.chuck-btn{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
 }
