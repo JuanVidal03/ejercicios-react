@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import getRandomJoke from '../services/axiosService';
 import Button from '@mui/material/Button';
+import axios from 'axios';
 
 const AxiosExample = () => {
     // estados para actualizar con un nuevo chiste
@@ -9,6 +10,7 @@ const AxiosExample = () => {
     const [like, setLike] = useState(0);
     // state dislike
     const [disLike, setDisLike] = useState(0);
+    const baseURL = 'https://api.chucknorris.io/jokes/random';
 
     //useEffect para cargar el contemnido antes de que rendirice la página
     useEffect(() => {
@@ -27,6 +29,17 @@ const AxiosExample = () => {
             alert(err);
         })
     }
+
+    // function para cambiar el chiste
+    const changeJoke = () => {
+        axios.get(`${baseURL}`)
+            .then((res) => {
+                setJoke(res.data)
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+    }
     
     // para dar like al chiste
     const fnLike = () => {
@@ -38,10 +51,7 @@ const AxiosExample = () => {
         setDisLike(disLike + 1)
     }
 
-    // function para cambiar el chiste
-    const changeJoke = () => {
-        window.location.reload(false)
-    }
+    
     
 
     return (
